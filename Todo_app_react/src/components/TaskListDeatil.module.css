@@ -1,0 +1,119 @@
+:root {
+    --primary: #6200ea;
+    --secondary-color: #3f068e  ;
+    --background-color: #f5f5f5;
+    --input-background: #fff;
+    --text-color: #333;
+    --button-background: #e0e0e0;
+    --button-text-color: #333;
+  }
+
+
+  
+   li {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+   li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .todo_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--primary);
+    color: white;
+  }
+  
+  .todo_list_title {
+    flex: 1;
+    font-weight: bold;
+  }
+ 
+  
+  .checkbox {
+    margin-right: 1rem; /* Added margin between checkbox and edit button */
+  }
+
+  .checkbox input[type="checkbox"] {
+    width: 18px; /* Increased checkbox size */
+    height: 18px; /* Increased checkbox size */
+    cursor: pointer;
+  }
+  
+  .edit,
+  .delete {
+    margin-left: 1rem;
+  }
+  
+  .delete button{
+    background: #ff5252 ;
+  }
+  .edit button{
+    background: #03dac6  ;
+  }
+  .edit button,
+  .delete button {
+    cursor: pointer;
+    border: 0;
+    color: var(--button-text-color);
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .edit button:hover,
+  .delete button:hover {
+    color: white;
+    border-color: var(--secondary-color);
+  }
+  
+  .todo_list_detail {
+    background: var(--input-background);
+    padding: 1rem;
+  }
+  
+  .todo_list_body {
+    margin-bottom: 0.5rem;
+  }
+  
+  .todo_list_time {
+    text-align: right;
+    color: var(--text-color);
+  }
+  
+  .Task_list li:hover .todo_list_detail {
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .todo_list {
+      padding: 0.5rem;
+    }
+  
+    .todo_list_title {
+      font-size: 1rem;
+    }
+  
+    .checkbox input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .edit button,
+    .delete button {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+    }
+       
+    .todo_list_detail {
+      padding: 0.5rem;
+    }
+  }

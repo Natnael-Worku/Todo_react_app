@@ -1,0 +1,113 @@
+:root {
+    --primary: #6200ea; /* Updated primary color */
+    --secondary-color: #3f068e; /* Updated secondary color */
+    --background-color: #f5f5f5; /* Light background for better contrast */
+    --input-background: #fff; /* Background color for inputs */
+    --text-color: #333; /* Darker text color for better readability */
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px; /* Ensure the container doesn't exceed this width */
+    padding: 2rem;
+    margin: 4em auto;
+    background: var(--background-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container h1 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    text-align: center;
+  }
+  
+  .input_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input_container label {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .input_container input,
+  .input_container textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background: var(--input-background);
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input_container input:focus,
+  .input_container textarea:focus {
+    border-color: var(--primary);
+  }
+  
+  .input_container textarea {
+    resize: none; /* Prevents resizing for consistency */
+    height: 80px; /* Set a fixed height for the textarea */
+  }
+  
+  .input_container button {
+    align-self: flex-end;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--primary);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .input_container button:hover {
+    background: var(--secondary-color);
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+      margin: 1.5em auto;
+      border-radius: 15px;
+      max-width: 80%; /* Reduced max-width for a smaller container */
+    }
+  
+    .container h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .input_container label {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      align-self: flex-start;
+    }
+  
+    .input_container input,
+    .input_container textarea {
+      font-size: 1rem;
+      padding: 8px;
+      margin-bottom: 0.8rem;
+    }
+  
+    .input_container textarea {
+      height: 100px;
+    }
+  
+    .input_container button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }  
