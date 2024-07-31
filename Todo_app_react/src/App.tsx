@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import AppStyle from "./App.module.css";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
@@ -32,10 +32,10 @@ function App() {
   };
 
   return (
-    <>
+    <div className={AppStyle.container} >
       <TodoInput setData={setData} />
       <TodoList data={data} handleedit={handleedit}  handledelete= {handledelete} />
-    </>
+    </div>
   );
 }
 
