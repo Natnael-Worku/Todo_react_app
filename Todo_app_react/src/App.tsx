@@ -1,9 +1,7 @@
-
-import { useState } from 'react'
-import './App.css'
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
-
+import { useState } from "react";
+import "./App.css";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
 interface DataInterface {
   title: string;
@@ -12,21 +10,31 @@ interface DataInterface {
 }
 
 function App() {
-  const [data, setData] = useState<DataInterface[]>(  
-    
-    () =>
-    [
-    {
-      title: 'abs',
-      body: 'lorem ibhjavs gvsa hgnvsbn',
-      time: 'agsjvvnsbvn',
-    },
-  ]);
+  const [data, setData] = useState<DataInterface[]>(() => []);
+  const handledelete = (id:string) => {
+
+    setData((prevTodos) =>
+      prevTodos.filter((todo,index)=> index !== Number(id))
+    );
+
+  };
+  const handleedit = (
+    id: string,
+    title: string,
+    body: string,
+    time: string
+  ) => {
+    setData((prevTodos) =>
+      prevTodos.map((todo, idx) =>
+        idx === Number(id) ? { ...todo, title, body, time } : todo
+      )
+    );
+  };
 
   return (
     <>
-      <TodoInput setData = {setData} />
-      <TodoList data={data} />
+      <TodoInput setData={setData} />
+      <TodoList data={data} handleedit={handleedit}  handledelete= {handledelete} />
     </>
   );
 }

@@ -7,17 +7,13 @@ interface DataInterface {
   time: string;
 }
 
-interface TodoListProps {
-  data: DataInterface[];
-}
-
 interface Props {
   setData: React.Dispatch<React.SetStateAction<DataInterface[]>>;
 }
 
 const TodoInput: React.FC<Props> = ({ setData }) => {
-  const [titleValue, setTitleValue] = useState(()=> "");
-  const [bodyValue, setBodyValue] = useState(()=>"");
+  const [titleValue, setTitleValue] = useState(() => "");
+  const [bodyValue, setBodyValue] = useState(() => "");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitleValue(event.target.value);
@@ -34,17 +30,22 @@ const TodoInput: React.FC<Props> = ({ setData }) => {
         body: bodyValue,
         time: new Date().toLocaleTimeString(),
       };
-  
+
       setData((prev) => [...prev, newTodo]);
       setTitleValue("");
       setBodyValue("");
-
     }
-    
   };
 
+
+
   return (
-    <div className={TodoInputStyle.container}>
+    <div
+      className={TodoInputStyle.container}
+      style={{
+        position: "relative",
+      }}
+    >
       <h1>Todo App</h1>
       <div className={TodoInputStyle.input_container}>
         <label htmlFor="title">Insert task title</label>

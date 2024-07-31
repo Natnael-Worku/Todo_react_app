@@ -50,16 +50,16 @@ li:hover {
   margin-left: 1rem;
 }
 
-.delete button {
+.delete  {
   background: #433d8b;
   color: white;
 }
-.edit button {
+.edit  {
   background: #433d8b;
   color: white;
 }
-.edit button,
-.delete button {
+.edit ,
+.delete  {
   cursor: pointer;
   border: 0;
   font-size: 0.9rem;
@@ -68,8 +68,8 @@ li:hover {
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.edit button:hover,
-.delete button:hover {
+.edit:hover,
+.delete:hover {
   color: white;
   border: 0.5px solid white;
   background: var(--primary);
