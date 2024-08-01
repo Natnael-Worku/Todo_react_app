@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TaskListDeatilStyle from "./TaskListDeatil.module.css";
 interface props {
   title: string;

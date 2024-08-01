@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and intuitive todo app built with React, CSS, Ant Design, and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks
+- Mark tasks as complete or incomplete
+- Edit existing tasks
+- Delete tasks
+- Responsive design for desktop and mobile
+## images of the Todo App
 
-## Expanding the ESLint configuration
+## todo app
+![image of teh todo app](image.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## task added
+![alt text](image-1.png)
+## deatil task
+![alt text](image-2.png)
+## edit page of a task
+![alt text](image-3.png)
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **React**: A JavaScript library for building user interfaces
+- **Ant Design**: A UI library of React components
+- **TypeScript**: A superset of JavaScript that adds static typing
+- **CSS**: For styling the application
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install the dependencies:
+4. Start the development server:
+## Usage
+
+1. **Add a new task**: Click the "Add Task" button and enter a task description.
+2. **Mark a task as complete/incomplete**: Click the checkbox next to a task to toggle its status.
+3. **Edit a task**: Click the "Edit" button next to a task to modify its description.
+4. **Delete a task**: Click the "Delete" button next to a task to remove it from the list.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.

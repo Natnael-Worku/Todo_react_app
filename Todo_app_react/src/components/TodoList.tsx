@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import TodoListStyle from "./TodoList.module.css";
 import TaskListDetail from "./TaskListDetail";
-import { Button, Flex, Modal } from "antd";
+import { Modal } from "antd";
 import { Input } from "antd";
 interface DataInterface {
   title: string;
