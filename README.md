@@ -12,7 +12,7 @@ A simple and intuitive todo app built with React, CSS, Ant Design, and TypeScrip
 ## images of the Todo App
 
 ## todo app
-![image of teh todo app](image.png)
+Todo_app_react/image-1.png
 
 ## task added
 ![alt text](image-1.png)
