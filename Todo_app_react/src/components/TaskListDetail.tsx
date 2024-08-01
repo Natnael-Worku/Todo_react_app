@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TaskListDeatilStyle from "./TaskListDeatil.module.css";
 interface props {
   title: string;
@@ -16,16 +16,25 @@ const TaskListDetail = ({
   id,
   setModal2Open,
   setId,
-  handledelete
+  handledelete,
 }: props) => {
+  const [isVisible, setIsVisible] = useState(()=>false);
+  const handleVisibility = () => {
+    setIsVisible((prevstate) => !prevstate);
+  };
   return (
     <>
       <li>
         <div className={TaskListDeatilStyle.todo_list}>
           <div className={TaskListDeatilStyle.todo_list_title}>{title}</div>
-          <div className={TaskListDeatilStyle.checkbox}>
-            <input type="checkbox" id="done" />
-          </div>
+          
+          <button
+            className={
+              TaskListDeatilStyle.edit}
+            onClick={()=> handleVisibility()}
+          >
+            detail
+          </button>
           <button
             onClick={() => {
               setId(id);
@@ -44,10 +53,12 @@ const TaskListDetail = ({
             Delete
           </button>
         </div>
-        <div className={TaskListDeatilStyle.todo_list_detail}>
-          <div className={TaskListDeatilStyle.todo_list_body}>{body}</div>
-          <div className={TaskListDeatilStyle.todo_list_time}>{time}</div>
-        </div>
+        {isVisible && (
+          <div className={TaskListDeatilStyle.todo_list_detail}>
+            <div className={TaskListDeatilStyle.todo_list_body}>{body}</div>
+            <div className={TaskListDeatilStyle.todo_list_time}>{time}</div>
+          </div>
+        )}
       </li>
     </>
   );

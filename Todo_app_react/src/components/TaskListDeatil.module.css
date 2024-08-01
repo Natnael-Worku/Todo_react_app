@@ -92,6 +92,9 @@ li:hover {
 .Task_list li:hover .todo_list_detail {
   display: block;
 }
+.active{
+  transform: rotatex(-90deg);
+}
 @media (max-width: 600px) {
   .todo_list {
     padding: 0.5rem;
